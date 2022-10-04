@@ -35,24 +35,6 @@ namespace TransformToWords
                 return "Double Epsilon";
             }
 
-            string CharToStr(char a) => a switch
-            {
-                '0' => "zero",
-                '1' => "one",
-                '2' => "two",
-                '3' => "three",
-                '4' => "four",
-                '5' => "five",
-                '6' => "six",
-                '7' => "seven",
-                '8' => "eight",
-                '9' => "nine",
-                ',' => "point",
-                '-' => "Minus",
-                '+' => "plus",
-                'E' => "E",
-                 _ => "Unexpected error",
-            };
             string numberStr = number.ToString();
             StringBuilder result = new StringBuilder();
             uint cunter = 0;
@@ -72,5 +54,24 @@ namespace TransformToWords
 
             return result.ToString();
         }
+
+        public static string CharToStr(char a) => a switch
+        {
+            '0' => "zero",
+            '1' => "one",
+            '2' => "two",
+            '3' => "three",
+            '4' => "four",
+            '5' => "five",
+            '6' => "six",
+            '7' => "seven",
+            '8' => "eight",
+            '9' => "nine",
+            ',' => "point",
+            '-' => "Minus",
+            '+' => "plus",
+            'E' => "E",
+            _ => "Unexpected error",
+        };
     }
 }
